@@ -14,3 +14,15 @@ DECLARE
 BEGIN
 	RAISE NOTICE 'F%', (1.8 *vr) + 32;
 END$$;
+
+--- faca um programa que gere tres valores reais a, b e c e mostre o
+--valor de delta
+DO $$
+DECLARE
+	a NUMERIC := RANDOM() * 10;
+	b NUMERIC := RANDOM() * 10;
+	c NUMERIC := RANDOM() * 10;
+	delta NUMERIC :=b^2 -4*a*c;
+BEGIN
+	RAISE NOTICE 'Delta = %', delta;
+END $$;
